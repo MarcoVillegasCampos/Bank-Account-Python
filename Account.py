@@ -5,6 +5,8 @@ class Account:
     def __init__(self, InterestRate,  ):
         self.interestRate=InterestRate       
         self.balance= 0.0
+        Account.allBankAccounts.append(self)
+        
        
 
     def withdraw (self, amount):
@@ -40,7 +42,10 @@ class Account:
     @classmethod
     def printAllAccountInfo (cls):
         for account in cls.allBankAccounts:
-            account.printInfo()
+            account.displayAccountInfo()
+
+
+
         
 
   
